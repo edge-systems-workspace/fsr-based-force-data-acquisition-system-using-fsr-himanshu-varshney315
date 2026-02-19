@@ -49,3 +49,8 @@ void setup() {
  *
  * @return void
  */
+void loop() {
+ value = analogRead(A0);
+ Serial.println(value);
+ delay(500);
+}
