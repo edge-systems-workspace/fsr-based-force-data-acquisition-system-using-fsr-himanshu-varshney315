@@ -28,3 +28,24 @@ int value = 0;
  *
  * @return void
  */
+void setup() {
+ Serial.begin(9600);
+ pinMode(A0, INPUT);
+}
+
+/**
+ * @brief Main execution loop - runs continuously after setup
+ *
+ * This function is called repeatedly by the Arduino framework after setup() completes.
+ * On each iteration, it:
+ * - Reads the analog value from pin A0 (force/pressure sensor)
+ * - Prints the sensor reading to the serial port
+ * - Waits 500 milliseconds before the next reading
+ *
+ * The sampling frequency is approximately 2 Hz (one reading every 500 ms).
+ *
+ * @note This function is part of the Arduino framework and is automatically called
+ *       in a continuous loop by the system.
+ *
+ * @return void
+ */
